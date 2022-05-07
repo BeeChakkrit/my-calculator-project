@@ -8,8 +8,12 @@ class CalculatorView extends GetView<CalculatorController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffecf0f1),
-        title: Text('AppBar'),
+        backgroundColor: Colors.indigo.shade400,
+        title: Center(
+            child: Text(
+          'เครื่องคิดเลข',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )),
         elevation: 1,
       ),
       body: Container(
@@ -24,7 +28,7 @@ class CalculatorView extends GetView<CalculatorController> {
     return Expanded(
       child: Container(
         padding: EdgeInsets.all(16),
-        color: Color(0xffdbdbdb),
+        color: Colors.white,
         child: Align(
           alignment: Alignment.bottomRight,
           child: Column(
@@ -52,7 +56,7 @@ class CalculatorView extends GetView<CalculatorController> {
 
   Widget buildNumPadWidget() {
     return Container(
-        color: Color(0xffdbdbdb),
+        color: Colors.white,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
@@ -137,7 +141,7 @@ class CalculatorView extends GetView<CalculatorController> {
       widget = Container(
           margin: EdgeInsets.all(1),
           child: Material(
-              color: Colors.white,
+              color: Colors.indigo.shade100,
               child: InkWell(
                   onTap: onTap,
                   splashColor: Colors.blue,
@@ -152,7 +156,7 @@ class CalculatorView extends GetView<CalculatorController> {
       widget = Container(
           margin: EdgeInsets.all(1),
           child: Material(
-              color: Color(0xffecf0f1),
+              color: Colors.indigo.shade200,
               child: InkWell(
                   onTap: onTap,
                   splashColor: Colors.blue,
